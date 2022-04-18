@@ -10,10 +10,11 @@ int main()
     const float speed(10);
 
     // Game variables
-    int circlePositionX{windowWidth / 2};
+    int circlePositionX{windowWidth / 4};
     int circlePositionY{windowHeight / 4};
     int axePositionX{windowWidth / 2};
     int axePositionY{windowHeight / 2};
+    int axeDirectionY = 1;
 
     // Initil statements
     InitWindow(windowWidth, windowHeight, windowTitle);
@@ -46,6 +47,14 @@ int main()
         }
 
         DrawCircle(circlePositionX, circlePositionY, radius, GREEN);
+
+        // Axe movement
+        axePositionY += axeDirectionY * speed;
+
+        if (axePositionY > windowHeight || axePositionY < 0)
+        {
+            axeDirectionY *= -1;
+        }
 
         DrawRectangle(axePositionX - radius, axePositionY - radius, radius * 2, radius * 2, RED);
 
