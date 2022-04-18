@@ -3,15 +3,17 @@
 int main()
 {
     // Game constants
-    const int windowWidth{350};
-    const int windowHeight{200};
+    const int windowWidth{800};
+    const int windowHeight{450};
     const char *windowTitle{"Axe Game"};
     const float radius{25};
     const float speed(10);
 
     // Game variables
     int circlePositionX{windowWidth / 2};
-    int circlePositionY{windowHeight / 2};
+    int circlePositionY{windowHeight / 4};
+    int axePositionX{windowWidth / 2};
+    int axePositionY{windowHeight / 2};
 
     // Initil statements
     InitWindow(windowWidth, windowHeight, windowTitle);
@@ -44,6 +46,8 @@ int main()
         }
 
         DrawCircle(circlePositionX, circlePositionY, radius, GREEN);
+
+        DrawRectangle(axePositionX - radius, axePositionY - radius, radius * 2, radius * 2, RED);
 
         EndDrawing();
     }
