@@ -12,6 +12,10 @@ int main()
     {
         BeginDrawing();
         ClearBackground(WHITE);
+
+        float radius{25};
+        DrawCircle(windowWidth / 2, windowHeight / 2, radius, GREEN);
+
         EndDrawing();
     }
 }
