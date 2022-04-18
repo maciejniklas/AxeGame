@@ -24,21 +24,21 @@ int main()
         ClearBackground(WHITE);
 
         // Circle horizontal movement
-        if (IsKeyDown(KEY_D))
+        if (IsKeyDown(KEY_D) && circlePositionX < windowWidth)
         {
             circlePositionX += speed;
         }
-        else if (IsKeyDown(KEY_A))
+        else if (IsKeyDown(KEY_A) && circlePositionX > 0)
         {
             circlePositionX -= speed;
         }
 
         // Circle vertical movement
-        if (IsKeyDown(KEY_W))
+        if (IsKeyDown(KEY_W) && circlePositionY > 0)
         {
             circlePositionY -= speed;
         }
-        else if (IsKeyDown(KEY_S))
+        else if (IsKeyDown(KEY_S) && circlePositionY < windowHeight)
         {
             circlePositionY += speed;
         }
