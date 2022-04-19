@@ -6,9 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 make game
- 
 # GNU Make 3.81
 # Copyright (C) 2006  Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.
@@ -16,11 +14,8 @@ make game
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
 
-
-# Make data base, printed on Mon Apr 18 21:43:43 2022
+# Make data base, printed on Tue Apr 19 11:45:35 2022
 
 # Variables
 
@@ -29,7 +24,6 @@ make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
 # environment
 RUBY_VERSION = ruby-2.7.2
 # automatic
- 
 ?F = $(notdir $?)
 # makefile (from `Makefile', line 360)
 SRC = $(call rwildcard, *.c, *.h)
@@ -72,7 +66,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/1z/5d612gsj56d17jn_bb9jpp7w0000gn/T/vscode-ipc-de964a36-3ac1-4aa6-817c-42af4f1d48e2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/1z/5d612gsj56d17jn_bb9jpp7w0000gn/T/vscode-ipc-35027442-13c8-4996-98db-c4951717a6c7.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -100,7 +94,7 @@ LDFLAGS = -L. -L$(RAYLIB_RELEASE_PATH) -L$(RAYLIB_PATH)/src
 # makefile (from `Makefile', line 60)
 USE_EXTERNAL_GLFW = FALSE
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.R7aQ4kj7ML/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.l7ZRiERzSA/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -138,7 +132,6 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # environment
 GEM_PATH = /Users/maciejniklas/.rvm/gems/ruby-2.7.2:/Users/maciejniklas/.rvm/gems/ruby-2.7.2@global
 # environment
- 
 XPC_FLAGS = 0x0
 # environment
 SDKMAN_VERSION = 5.14.1
@@ -233,7 +226,7 @@ MAKELEVEL := 1
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4932
+VSCODE_PID = 31799
 # environment
 MY_RUBY_HOME = /Users/maciejniklas/.rvm/rubies/ruby-2.7.2
 # variable set hash-table stats:
@@ -245,10 +238,10 @@ MY_RUBY_HOME = /Users/maciejniklas/.rvm/rubies/ruby-2.7.2
 
 # Directories
 
-# . (device 16777220, inode 23120551): 11 files, no impossibilities.
+# . (device 16777220, inode 23120551): 13 files, no impossibilities.
 # src: could not be stat'd.
 
-# 11 files, no impossibilities in 2 directories.
+# 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -259,7 +252,6 @@ obj/%.o: src/%.c
 
 # 1 implicit rules, 0 (0.0%) terminal.
 
- 
 # Files
 
 all:
@@ -286,6 +278,10 @@ main.c:
 
 # Not a target:
 .SUFFIXES:
+ 
+make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
+make: *** [all] Error 2
+
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -340,19 +336,15 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Apr 18 21:43:43 2022
-
- 
-make: *** [all] Error 2
+# Finished Make data base on Tue Apr 19 11:45:35 2022
 
 
-# Make data base, printed on Mon Apr 18 21:43:43 2022
+# Make data base, printed on Tue Apr 19 11:45:35 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
- 
 # environment
 RUBY_VERSION = ruby-2.7.2
 # automatic
@@ -398,7 +390,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/1z/5d612gsj56d17jn_bb9jpp7w0000gn/T/vscode-ipc-de964a36-3ac1-4aa6-817c-42af4f1d48e2.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/1z/5d612gsj56d17jn_bb9jpp7w0000gn/T/vscode-ipc-35027442-13c8-4996-98db-c4951717a6c7.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -426,8 +418,7 @@ LDFLAGS = -L. -L$(RAYLIB_RELEASE_PATH) -L$(RAYLIB_PATH)/src
 # makefile (from `Makefile', line 60)
 USE_EXTERNAL_GLFW = FALSE
 # environment
- 
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.R7aQ4kj7ML/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.l7ZRiERzSA/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -541,7 +532,6 @@ PROJECT_NAME = game
 # environment
 SDKMAN_CANDIDATES_DIR = /Users/maciejniklas/.sdkman/candidates
 # makefile (from `Makefile', line 48)
- 
 RAYLIB_INSTALL_PATH = $(DESTDIR)/lib
 # environment
 LC_ALL = C
@@ -560,7 +550,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4932
+VSCODE_PID = 31799
 # environment
 MY_RUBY_HOME = /Users/maciejniklas/.rvm/rubies/ruby-2.7.2
 # variable set hash-table stats:
@@ -568,14 +558,15 @@ MY_RUBY_HOME = /Users/maciejniklas/.rvm/rubies/ruby-2.7.2
 
 # Pattern-specific Variable Values
 
+ 
 # No pattern-specific variable values.
 
 # Directories
 
-# . (device 16777220, inode 23120551): 11 files, no impossibilities.
+# . (device 16777220, inode 23120551): 13 files, no impossibilities.
 # src: could not be stat'd.
 
-# 11 files, no impossibilities in 2 directories.
+# 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -621,7 +612,6 @@ all:
 .PHONY: all clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -683,6 +673,6 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Apr 18 21:43:43 2022
+# Finished Make data base on Tue Apr 19 11:45:35 2022
 
  

@@ -6,15 +6,28 @@ int main()
     const int windowWidth{800};
     const int windowHeight{450};
     const char *windowTitle{"Axe Game"};
-    const float radius{25};
-    const float speed(10);
+    const int radius{25};
 
     // Game variables
+    int speed{10};
     int circlePositionX{windowWidth / 4};
     int circlePositionY{windowHeight / 4};
     int axePositionX{windowWidth / 2};
     int axePositionY{windowHeight / 2};
-    int axeDirectionY = 1;
+    int axeDirectionY{1};
+    bool collisionWithAxe{false};
+
+    // Edges of the circle
+    int circleLeftEdge{circlePositionX - radius};
+    int circleRightEdge{circlePositionX + radius};
+    int circleTopEdge{circlePositionY - radius};
+    int circleBottomEdge{circlePositionY + radius};
+
+    // Edges of the axe
+    int axeLeftEdge{axePositionX - radius};
+    int axeRightEdge{axePositionX + radius};
+    int axeTopEdge{axePositionY - radius};
+    int axeBottomEdge{axePositionY + radius};
 
     // Initil statements
     InitWindow(windowWidth, windowHeight, windowTitle);
@@ -57,6 +70,29 @@ int main()
         }
 
         DrawRectangle(axePositionX - radius, axePositionY - radius, radius * 2, radius * 2, RED);
+
+        // Detecting collision with axe
+
+        // Edges of the circle
+        circleLeftEdge = circlePositionX - radius;
+        circleRightEdge = circlePositionX + radius;
+        circleTopEdge = circlePositionY - radius;
+        circleBottomEdge = circlePositionY + radius;
+
+        // Edges of the axe
+        axeLeftEdge = axePositionX - radius;
+        axeRightEdge = axePositionX + radius;
+        axeTopEdge = axePositionY - radius;
+        axeBottomEdge = axePositionY + radius;
+
+        // Collision flag
+        collisionWithAxe = axeBottomEdge >= circleTopEdge && axeTopEdge <= circleBottomEdge && axeLeftEdge <= circleRightEdge && axeRightEdge >= circleLeftEdge;
+
+        if (collisionWithAxe)
+        {
+            speed = 0;
+            DrawText("Game over!", 25, 25, 50, RED);
+        }
 
         EndDrawing();
     }
