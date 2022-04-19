@@ -27,9 +27,8 @@ List the ready features here:
 
 
 ## Screenshots
-![1](./img/screenshot1.png)
-![2](./img/screenshot2.png)
-
+![1](./screenshots/1.png)
+![2](./screenshots/2.png)
 
 ## Project Status
 Project is: __complete__
